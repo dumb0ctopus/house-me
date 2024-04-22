@@ -157,15 +157,14 @@ function Navbar() {
             >
               <img
                 src="https://w7.pngwing.com/pngs/613/636/png-transparent-computer-icons-user-profile-male-avatar-avatar-heroes-logo-black-thumbnail.png"
-                alt="Owner Avatar"
+                alt="Owner's Avatar"
                 className="w-full h-full rounded-full "
               />
             </button>
           </div>
-
           {/* Notification button */}
-          <div className="order-1 md:order-2 px-7 md:px-0">
-            <NotificationsActiveOutlinedIcon style={{ fontSize: "30px" }} />
+          <div className="order-1 md:order-2 sm:px-0">
+            <NotificationsActiveOutlinedIcon style={{ fontSize: "25px" }} />
           </div>
         </div>
 

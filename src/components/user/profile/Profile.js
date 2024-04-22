@@ -26,8 +26,8 @@ const Profile = () => {
   return (
     <>
       <Navbar />
-      <div className="flex justify-center items-center">
-        <div className="bg-white rounded-lg px-24 w-full">
+      <div className="flex justify-center items-center mt-32">
+        <div className="bg-white rounded-lg sm:px-[20%] px-0 w-full">
           <div className="flex flex-col items-center">
             <h1 className="text-2xl font-bold mb-4 text-center">
               Profile Details

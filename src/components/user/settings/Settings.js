@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "../../reusableComponents/navbar/Navbar";
 import DoneAllOutlinedIcon from "@mui/icons-material/DoneAllOutlined";
+import { DoneAllRounded } from "@mui/icons-material";
 
 const Settings = () => {
   const [email, setEmail] = useState("onlyone@gmail.com");
@@ -64,8 +65,8 @@ const Settings = () => {
   return (
     <>
       <Navbar />
-      <div className="flex justify-center items-center">
-        <div className="bg-white rounded-lg px-24 w-full">
+      <div className="flex justify-center items-center mt-32">
+        <div className="bg-white rounded-lg md:px-24 px-0 w-full">
           <div className="flex flex-col items-center">
             <h1 className="text-2xl font-bold mb-4 text-center">
               Account Settings
@@ -74,11 +75,11 @@ const Settings = () => {
           </div>
           <div className="mr-[5%] ml-[5%]">
             {/* email */}
-            <div className="flex space-x-11">
-              <div className="py-8 w-full">
+            <div className="sm:flex sm:space-x-5 justify-between">
+              <div className="sm:py-8 py-3 w-full">
                 <label
                   htmlFor="email"
-                  className="text-lg font-medium text-gray-700"
+                  className="text-lg font-bold text-gray-700"
                 >
                   Email Verification
                 </label>
@@ -86,26 +87,28 @@ const Settings = () => {
                   Verify the email address associated with this account
                 </h2>
               </div>
-              <div className="flex items-center justify-between space-x-28 py-8">
-                <div className="flex items-center rounded-md bg-green-400 p-2 space-x-3">
-                  <span className="">{email}</span>
-                  <DoneAllOutlinedIcon className="text-white border-green-500" />
+              <div className="flex sm:space-y-3 items-center justify-between lg:space-x-28 md:space-x-5 sm:space-x-11 sm:py-8">
+                <div className="flex rounded-md bg-green-700 px-5 py-3 space-x-3">
+                  <span className="text-white">{email}</span>
+                  <DoneAllRounded className="text-white" />
                 </div>
-
-                <button
-                  onClick={handleEmailEdit}
-                  className="text-green-600 hover:text-green-700 px-11 py-2 font-bold border border-green-600 rounded-full"
-                >
-                  Edit
-                </button>
+                <div className="flex items-center">
+                  <button
+                    onClick={handleEmailEdit}
+                    className="text-green-600 hover:text-green-700 px-11 py-2 font-bold border border-green-600 rounded-full"
+                  >
+                    Edit
+                  </button>
+                </div>
               </div>
             </div>
+            <div className="sm:py-0 py-3"></div>
             {/* password */}
-            <div className="flex space-x-11">
-              <div className="py-8 w-full">
+            <div className="sm:flex sm:space-x-11 w-full">
+              <div className="sm:py-8 py-3 w-full">
                 <label
                   htmlFor="password"
-                  className="text-lg font-medium text-gray-700"
+                  className="text-lg font-bold text-gray-700"
                 >
                   Change Password
                 </label>
@@ -113,7 +116,7 @@ const Settings = () => {
                   Change the password linked with this account
                 </h2>
               </div>
-              <div className="py-8">
+              <div className="text-right sm:py-8">
                 <button
                   onClick={handlePasswordChange}
                   className="text-green-600 hover:text-green-700 px-11 py-2 font-bold border border-green-600 rounded-full whitespace-nowrap"
@@ -123,11 +126,11 @@ const Settings = () => {
               </div>
             </div>
             {/* notification */}
-            <div className="flex space-x-11">
-              <div className="py-8 w-full">
+            <div className="sm:flex">
+              <div className="sm:py-8 py-3 w-full">
                 <label
                   htmlFor="notifications"
-                  className="text-lg font-medium text-gray-700"
+                  className="text-lg font-bold text-gray-700"
                 >
                   Notifications
                 </label>
@@ -137,31 +140,37 @@ const Settings = () => {
                 </h2>
               </div>
 
-              <div className="flex items-center">
+              <div className="flex items-center mb-5 sm:mb-0">
                 <div className="flex">
                   <button
                     onClick={handleNotificationsToggle}
                     className={`${
                       notificationsEnabled
-                        ? "bg-green-500 text-white"
-                        : "bg-green-400 text-gray-500"
+                        ? "bg-green-700 text-white"
+                        : "bg-green-500 text-gray-500"
                     } px-7 py-3 rounded-lg whitespace-nowrap`}
                   >
                     {notificationsEnabled
                       ? "Notification Enabled"
                       : "Notification Disabled"}
                     <span className="ml-2"></span>
-                    <DoneAllOutlinedIcon className="text-white" />
+                    <DoneAllOutlinedIcon
+                      className={`${
+                        notificationsEnabled
+                          ? "bg-green-700 text-white"
+                          : "bg-green-500 text-gray-500"
+                      }`}
+                    />
                   </button>
                 </div>
               </div>
             </div>
             {/* deactivate */}
-            <div className="flex space-x-11">
-              <div className="py-8 w-full">
+            <div className="sm:flex space-x-11">
+              <div className="sm:py-8 py-3 w-full">
                 <label
                   htmlFor="deactivate"
-                  className="text-lg font-medium text-gray-700"
+                  className="text-lg font-bold text-gray-700"
                 >
                   Deactivate & Delete Account
                 </label>
@@ -170,7 +179,7 @@ const Settings = () => {
                   30 days
                 </h2>
               </div>
-              <div className="py-8">
+              <div className="text-right sm:py-8">
                 <button
                   onClick={handleDeactivateAccount}
                   className="text-red-600 hover:text-red-500 border border-red-600 rounded-full whitespace-nowrap px-11 py-2"
