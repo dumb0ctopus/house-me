@@ -6,7 +6,7 @@ function SearchPage() {
   return (
     <div>
       {/* img */}
-      <div className="lg:-mt-[20%] md:-mt-[15%] -mt-[10%]">
+      <div className="lg:-mt-[20%] md:-mt-[15%] -mt-[1%]">
         <img
           src={house}
           alt="House"
@@ -15,9 +15,11 @@ function SearchPage() {
       </div>
 
       {/* search */}
-      <div className="absolute inset-1 flex items-center justify-center sm:mt-0 -mt-[40%]">
+      <div className="absolute inset-1 flex items-center justify-center sm:mt-0 sms:-mt-[30%] xsm:-mt-[40%] xxsm:-mt-[50%] -mt-[60%]">
         <div className="text-white text-center">
-          <h1 className="text-4xl font-bold mb-6">Secure Your Dream Home</h1>
+          <h1 className="sm:text-4xl text-xl font-bold sm:mb-6 mb-2">
+            Secure Your Dream Home
+          </h1>
           <div className="flex justify-center">
             <div className="sm:bg-white rounded-lg p-3 flex flex-col sm:flex-row items-center sm:space-x-3">
               {/* first two for small screens */}

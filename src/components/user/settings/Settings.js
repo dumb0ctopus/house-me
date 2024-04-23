@@ -66,7 +66,7 @@ const Settings = () => {
     <>
       <Navbar />
       <div className="flex justify-center items-center mt-32">
-        <div className="bg-white rounded-lg md:px-24 px-0 w-full">
+        <div className="rounded-lg md:px-24 px-0 w-full">
           <div className="flex flex-col items-center">
             <h1 className="text-2xl font-bold mb-4 text-center">
               Account Settings
@@ -75,7 +75,7 @@ const Settings = () => {
           </div>
           <div className="mr-[5%] ml-[5%]">
             {/* email */}
-            <div className="sm:flex sm:space-x-5 justify-between">
+            <div className="lg:flex sm:flex-row flex-col items-center w-full">
               <div className="sm:py-8 py-3 w-full">
                 <label
                   htmlFor="email"
@@ -87,21 +87,22 @@ const Settings = () => {
                   Verify the email address associated with this account
                 </h2>
               </div>
-              <div className="flex sm:space-y-3 items-center justify-between lg:space-x-28 md:space-x-5 sm:space-x-11 sm:py-8">
-                <div className="flex rounded-md bg-green-700 px-5 py-3 space-x-3">
+              <div className="flex sm:flex-row flex-col sm:space-x-5 justify-between">
+                <div className="flex rounded-md bg-green-700 px-5 py-3 space-x-3 w-min">
                   <span className="text-white">{email}</span>
                   <DoneAllRounded className="text-white" />
                 </div>
-                <div className="flex items-center">
+                <div className="flex justify-end">
                   <button
                     onClick={handleEmailEdit}
-                    className="text-green-600 hover:text-green-700 px-11 py-2 font-bold border border-green-600 rounded-full"
+                    className="text-green-600 hover:text-green-700 px-11 py-2 font-bold border border-green-600 rounded-full mt-3 sm:mt-0 whitespace-nowrap"
                   >
                     Edit
                   </button>
                 </div>
               </div>
             </div>
+
             <div className="sm:py-0 py-3"></div>
             {/* password */}
             <div className="sm:flex sm:space-x-11 w-full">
@@ -156,9 +157,7 @@ const Settings = () => {
                     <span className="ml-2"></span>
                     <DoneAllOutlinedIcon
                       className={`${
-                        notificationsEnabled
-                          ? "bg-green-700 text-white"
-                          : "bg-green-500 text-gray-500"
+                        notificationsEnabled ? "text-white" : "text-gray-500"
                       }`}
                     />
                   </button>

@@ -35,31 +35,46 @@ function Footer() {
           </div>
         </div>
         <div className="flex md:flex-row sm:flex-col flex-row items-center space-x-4 mb-7">
-          <a href="##" className="text-gray-500 hover:text-gray-700">
+          <a href="##" className="text-gray-500 text-xs hover:text-gray-700">
             FAQs
           </a>
-          <a href="##" className="text-gray-500 hover:text-gray-700">
+          <a
+            href="##"
+            className="text-gray-500 sm:text-sm text-xs hover:text-gray-700"
+          >
             Contact Us
           </a>
-          <a href="##" className="text-gray-500 hover:text-gray-700">
+          <a
+            href="##"
+            className="text-gray-500 sm:text-sm text-xs hover:text-gray-700"
+          >
             EULA
           </a>
-          <a href="##" className="text-gray-500 hover:text-gray-700">
+          <a
+            href="##"
+            className="text-gray-500 sm:text-sm text-xs hover:text-gray-700"
+          >
             Privacy Policy
           </a>
         </div>
         <div className="items-center space-y-1 mb-7">
           <div className="flex">
             <LocationOnSharpIcon className="text-green-500" />
-            <span className="text-gray-500">Somewhere, The Milkyway</span>
+            <span className="text-gray-500 sm:text-base text-sm">
+              Somewhere, The Milkyway
+            </span>
           </div>
           <div>
             <CallSharpIcon className="text-green-500" />
-            <span className="text-gray-500">123 456 7890</span>
+            <span className="text-gray-500 sm:text-base text-sm">
+              123 456 7890
+            </span>
           </div>
           <div>
             <MailSharpIcon className="text-green-500" />
-            <span className="text-gray-500">contact@houseme.ng</span>
+            <span className="text-gray-500 sm:text-base text-sm">
+              contact@houseme.ng
+            </span>
           </div>
         </div>
       </div>

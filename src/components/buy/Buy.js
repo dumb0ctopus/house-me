@@ -1,5 +1,3 @@
-//buy
-
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import Navbar from "../reusableComponents/navbar/Navbar";
@@ -10,9 +8,7 @@ import properties from "../../data/listing.json";
 import SearchSharpIcon from "@mui/icons-material/SearchSharp";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import TuneOutlinedIcon from "@mui/icons-material/TuneOutlined";
-
 delete L.Icon.Default.prototype._getIconUrl;
-
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
   iconUrl: require("leaflet/dist/images/marker-icon.png"),
@@ -29,16 +25,16 @@ function Buy() {
   return (
     <div>
       <Navbar />
-      <div className="flex space-x-7 mt-[82px]">
+      <div className="flex flex-col md:flex-row md:space-x-7 mt-[80px]">
         {/* Map container */}
-        <div className="w-[50%]">
+        <div className="w-full md:w-1/2">
           <MapContainer
             center={[6.465422, 3.406448]}
             zoom={13}
-            className="w-full h-full rounded-2xl"
+            className="w-full md:h-[100%] h-[400px] rounded-2xl"
           >
             <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+              attribution='© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             <Marker position={[6.465422, 3.406448]}>
@@ -47,7 +43,7 @@ function Buy() {
           </MapContainer>
         </div>
         {/* Properties */}
-        <div style={{ width: "50%", height: "100vh", overflowY: "auto" }}>
+        <div className="w-full md:w-1/2">
           <div className="mt-7">
             <div className="mb-5">
               <h1 className="text-3xl font-bold">Search Properties</h1>

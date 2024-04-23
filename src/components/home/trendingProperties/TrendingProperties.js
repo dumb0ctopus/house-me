@@ -3,7 +3,7 @@ import listings from "../../../data/listing.json";
 
 const TrendingProperties = () => {
   return (
-    <div className="bg-white py-8 mx-11">
+    <div className="py-8 mx-11">
       <div className="container mx-auto">
         <h2 className="text-xl font-bold mb-1">
           Trending properties in Lagos, NG

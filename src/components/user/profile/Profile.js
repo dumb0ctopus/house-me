@@ -27,7 +27,7 @@ const Profile = () => {
     <>
       <Navbar />
       <div className="flex justify-center items-center mt-32">
-        <div className="bg-white rounded-lg sm:px-[20%] px-0 w-full">
+        <div className=" rounded-lg sm:px-[20%] px-0 w-full">
           <div className="flex flex-col items-center">
             <h1 className="text-2xl font-bold mb-4 text-center">
               Profile Details
@@ -40,15 +40,15 @@ const Profile = () => {
               <div className="py-8 w-full">
                 <label
                   htmlFor="title"
-                  className="text-lg font-medium text-gray-700"
+                  className="sm:text-lg text-sm font-bold text-gray-700"
                 >
-                  Title
+                  Title*
                 </label>
                 <select
                   id="title"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                  className="mt-1 block w-full rounded-md border-indigo-700 text-sm py-3 px-3"
+                  className="mt-1 block w-full rounded-md border-green-700 text-sm py-3 px-3 bg-gray-200"
                 >
                   <option>Mr.</option>
                   <option>Ms.</option>
@@ -58,16 +58,16 @@ const Profile = () => {
               <div className="py-8 w-full">
                 <label
                   htmlFor="name"
-                  className="text-lg font-medium text-gray-700"
+                  className="sm:text-lg text-sm font-bold text-gray-700"
                 >
-                  Name
+                  Name*
                 </label>
                 <input
                   id="name"
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="mt-1 block w-full rounded-md border-indigo-700 text-sm py-3 px-3 bg-gray-200"
+                  className="mt-1 block w-full rounded-md border-green-700 text-sm py-3 px-3 bg-gray-200"
                 />
               </div>
             </div>
@@ -76,31 +76,31 @@ const Profile = () => {
               <div className="py-8 w-full">
                 <label
                   htmlFor="email"
-                  className="text-lg font-medium text-gray-700"
+                  className="sm:text-lg text-sm font-bold text-gray-700"
                 >
-                  Email Address
+                  Email Address*
                 </label>
                 <input
                   id="email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="mt-1 block w-full rounded-md border-indigo-700 text-sm py-3 px-3 bg-gray-200"
+                  className="mt-1 block w-full rounded-md border-green-700 text-sm py-3 px-3 bg-gray-200"
                 />
               </div>
               <div className="py-8 w-full">
                 <label
                   htmlFor="phone"
-                  className="text-lg font-medium text-gray-700"
+                  className="sm:text-lg text-sm font-bold text-gray-700"
                 >
-                  Phone Number
+                  Phone Number*
                 </label>
                 <input
                   id="phone"
                   type="tel"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="mt-1 block w-full rounded-md border-indigo-700 text-sm py-3 px-3 bg-gray-200"
+                  className="mt-1 block w-full rounded-md border-green-700 text-sm py-3 px-3 bg-gray-200"
                 />
               </div>
             </div>
@@ -109,31 +109,31 @@ const Profile = () => {
               <div className="py-8 w-full">
                 <label
                   htmlFor="userType"
-                  className="text-lg font-medium text-gray-700"
+                  className="sm:text-lg text-sm font-bold text-gray-700"
                 >
-                  User Type
+                  User Type*
                 </label>
                 <input
                   id="userType"
                   type="text"
                   value={userType}
                   onChange={(e) => setUserType(e.target.value)}
-                  className="mt-1 block w-full rounded-md border-indigo-700 text-sm py-3 px-3 bg-gray-200"
+                  className="mt-1 block w-full rounded-md border-green-700 text-sm py-3 px-3 bg-gray-200"
                 />
               </div>
               <div className="py-8 w-full">
                 <label
                   htmlFor="country"
-                  className="text-lg font-medium text-gray-700"
+                  className="sm:text-lg text-sm font-bold text-gray-700"
                 >
-                  Country of Residence
+                  Country of Residence*
                 </label>
                 <input
                   id="country"
                   type="text"
                   value={country}
                   onChange={(e) => setCountry(e.target.value)}
-                  className="mt-1 block w-full rounded-md border-indigo-700 text-sm py-3 px-3 bg-gray-200"
+                  className="mt-1 block w-full rounded-md border-green-700 text-sm py-3 px-3 bg-gray-200"
                 />
               </div>
             </div>
@@ -173,7 +173,7 @@ const Profile = () => {
                     <div className="flex text-sm text-gray-600">
                       <label
                         htmlFor="profile-image"
-                        className="relative cursor-pointer bg-white rounded-full font-medium text-green-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
+                        className="relative cursor-pointer bg-white rounded-full font-medium text-green-600 hover:text-green-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-green-500"
                       >
                         <span>Upload a file</span>
                         <input
@@ -202,7 +202,7 @@ const Profile = () => {
           <div className="mt-6 flex justify-center pb-5">
             <button
               onClick={handleSaveChanges}
-              className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-full text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-full text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
             >
               Save Changes
             </button>

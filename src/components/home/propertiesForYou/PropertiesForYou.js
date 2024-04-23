@@ -3,7 +3,7 @@ import listings from "../../../data/listing.json";
 
 const Listing = () => {
   return (
-    <div className="bg-white py-8 mx-11 md:mt-0 mt-16">
+    <div className="py-8 mx-11 md:mt-0 mt-16">
       <div className="container mx-auto">
         <h2 className="text-xl font-bold mb-1">
           Properties for you in Lagos, NG

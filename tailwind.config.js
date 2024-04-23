@@ -3,6 +3,12 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
+      xxsm: "480px",
+      // => @media (min-width: 640px) { ... }
+      xsm: "510px",
+      // => @media (min-width: 640px) { ... }
+      sms: "550px",
+      // => @media (min-width: 640px) { even more retarded... }
       sm: "640px",
       // => @media (min-width: 640px) { ... }
       mds: "650px",

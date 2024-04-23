@@ -8,6 +8,7 @@ import NotificationsActiveOutlinedIcon from "@mui/icons-material/NotificationsAc
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,12 +32,16 @@ function Navbar() {
             className="rounded-full h-10 w-10 flex items-center justify-center"
             onClick={toggleHamburger}
           >
-            <MenuRoundedIcon style={{ fontSize: "30px" }} />
+            {isHamburgerOpen ? (
+              <CloseRoundedIcon style={{ fontSize: "30px" }} />
+            ) : (
+              <MenuRoundedIcon style={{ fontSize: "30px" }} />
+            )}{" "}
           </button>
         </div>
         {/* profile menu dropdown */}
         {isHamburgerOpen && (
-          <div className="absolute -left-3 mt-[59px] w-60 bg-white rounded-xl shadow-lg z-10">
+          <div className="absolute -left-3 mt-[174%] w-60 bg-white rounded-xl shadow-lg z-10">
             <div className="items-center justify-center">
               {/* home */}
               <Link to="/home" className="hover:">
@@ -74,9 +79,9 @@ function Navbar() {
       </div>
 
       {/* logo */}
-      <div className="flex items-center">
+      <div className="flex items-center xxsm:ml-0 ml-[5%]">
         <Link to="/home">
-          <img src={logo} alt="house me logo" className="h-8 mr-2" />
+          <img src={logo} alt="house me logo" className="h-8" />
         </Link>
       </div>
 
@@ -155,22 +160,26 @@ function Navbar() {
               className="rounded-full h-8 w-8 flex items-center justify-center"
               onClick={toggleMenu}
             >
-              <img
-                src="https://w7.pngwing.com/pngs/613/636/png-transparent-computer-icons-user-profile-male-avatar-avatar-heroes-logo-black-thumbnail.png"
-                alt="Owner's Avatar"
-                className="w-full h-full rounded-full "
-              />
+              {isMenuOpen ? (
+                <CloseRoundedIcon style={{ fontSize: "30px" }} />
+              ) : (
+                <img
+                  src="https://w7.pngwing.com/pngs/613/636/png-transparent-computer-icons-user-profile-male-avatar-avatar-heroes-logo-black-thumbnail.png"
+                  alt="Owner's Avatar"
+                  className="w-full h-full rounded-full "
+                />
+              )}
             </button>
           </div>
           {/* Notification button */}
-          <div className="order-1 md:order-2 sm:px-0">
+          <div className="order-1 md:order-2">
             <NotificationsActiveOutlinedIcon style={{ fontSize: "25px" }} />
           </div>
         </div>
 
         {/* profile menu dropdown */}
         {isMenuOpen && (
-          <div className="absolute right-0 mt-8 -mr-3 w-60 bg-white rounded-xl shadow-lg z-10">
+          <div className="absolute right-0 mt-[39%] -mr-3 w-60 bg-white rounded-xl shadow-lg z-10">
             <div>
               <Link
                 to="/profile"
